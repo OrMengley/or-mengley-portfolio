@@ -121,6 +121,7 @@ export function FeaturedProjects() {
               <ProjectPreviewPlaceholder
                 title={flagshipProject.title}
                 category={flagshipProject.category}
+                imagePath={flagshipProject.imagePath}
                 isFlagship
               />
             </div>
@@ -139,14 +140,14 @@ export function FeaturedProjects() {
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                 {/* Visual Preview Placeholder */}
                 <div
-                  className={`lg:col-span-5 cursor-pointer ${
-                    isEven ? 'lg:order-last' : 'lg:order-first'
-                  }`}
+                  className={`lg:col-span-5 cursor-pointer ${isEven ? 'lg:order-last' : 'lg:order-first'
+                    }`}
                   onClick={() => setSelectedProject(project)}
                 >
                   <ProjectPreviewPlaceholder
                     title={project.title}
                     category={project.category}
+                    imagePath={project.imagePath}
                   />
                 </div>
 
@@ -192,16 +193,36 @@ export function FeaturedProjects() {
                     </div>
                   </div>
 
-                  {/* Action Button */}
-                  <div className="mt-6">
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      onClick={() => setSelectedProject(project)}
-                    >
-                      <span>View Case Study</span>
-                      <ArrowRight className="w-3.5 h-3.5" />
-                    </Button>
+                  {/* Action Buttons */}
+                  <div className="mt-6 flex flex-wrap items-center gap-3">
+                    {project.caseStudyUrl ? (
+                      <>
+                        <Button
+                          variant="primary"
+                          size="sm"
+                          href={project.caseStudyUrl}
+                        >
+                          <span>View Full Case Study</span>
+                          <ArrowRight className="w-3.5 h-3.5" />
+                        </Button>
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          onClick={() => setSelectedProject(project)}
+                        >
+                          <span>Quick Summary</span>
+                        </Button>
+                      </>
+                    ) : (
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        onClick={() => setSelectedProject(project)}
+                      >
+                        <span>View Case Study</span>
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </Button>
+                    )}
                   </div>
                 </div>
               </div>

@@ -1,6 +1,7 @@
 'use client';
 
 import * as React from 'react';
+import { usePathname } from 'next/navigation';
 import { ThemeToggle } from '@/components/ui/ThemeToggle';
 import { Menu, X } from 'lucide-react';
 
@@ -13,8 +14,15 @@ export const NAV_ITEMS = [
 ];
 
 export function Navbar() {
+  const pathname = usePathname();
+  const isHomePage = pathname === '/';
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
   const [scrolled, setScrolled] = React.useState(false);
+
+  const getHref = (href: string) => {
+    if (isHomePage) return href;
+    return `/${href}`;
+  };
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -35,7 +43,7 @@ export function Navbar() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         {/* Brand / Name */}
         <a
-          href="#hero"
+          href={getHref('#hero')}
           className="text-base font-bold text-foreground tracking-tight hover:text-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded-md px-1 py-0.5"
         >
           Or Mengley <span className="text-accent">.</span>
@@ -46,7 +54,7 @@ export function Navbar() {
           {NAV_ITEMS.map((item) => (
             <a
               key={item.label}
-              href={item.href}
+              href={getHref(item.href)}
               className="px-3 py-1.5 text-sm font-medium text-muted-foreground hover:text-foreground rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
             >
               {item.label}
@@ -82,7 +90,7 @@ export function Navbar() {
             {NAV_ITEMS.map((item) => (
               <a
                 key={item.label}
-                href={item.href}
+                href={getHref(item.href)}
                 onClick={() => setMobileMenuOpen(false)}
                 className="px-4 py-2.5 text-base font-medium text-foreground hover:bg-muted rounded-lg transition-colors"
               >

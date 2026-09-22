@@ -174,13 +174,25 @@ export function CaseStudyModal({
         </div>
 
         {/* Modal Footer */}
-        <div className="mt-8 pt-4 border-t border-border flex justify-end">
+        <div className="mt-8 pt-4 border-t border-border flex flex-wrap items-center justify-between gap-3">
+          {project.caseStudyUrl || project.id === 'tk-custom-admin' ? (
+            <a
+              href={project.caseStudyUrl || '/projects/tk-custom-admin'}
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-accent text-accent-foreground text-xs font-semibold hover:opacity-90 transition-opacity"
+            >
+              <span>View Full Case Study Page</span>
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+          ) : (
+            <div />
+          )}
+
           <button
             type="button"
             onClick={onClose}
             className="px-4 py-2 rounded-lg bg-muted text-foreground text-xs font-medium hover:bg-border transition-colors cursor-pointer"
           >
-            Close Case Study
+            Close
           </button>
         </div>
       </div>

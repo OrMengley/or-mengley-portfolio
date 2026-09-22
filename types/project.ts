@@ -17,4 +17,6 @@ export interface FeaturedProject {
   featureGroups?: ProjectFeatureGroup[];
   allFeatures: string[];
   isFlagship?: boolean;
+  imagePath?: string;
+  caseStudyUrl?: string;
 }

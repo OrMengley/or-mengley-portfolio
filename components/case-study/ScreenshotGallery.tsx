@@ -98,47 +98,53 @@ export function ScreenshotGallery() {
           onClick={() => setSelectedImage(null)}
         >
           <div
-            className="relative w-full max-w-4xl rounded-2xl border border-border bg-card p-6 shadow-2xl overflow-hidden"
+            className="relative w-full max-w-4xl rounded-2xl border border-border bg-card p-6 shadow-2xl overflow-y-auto max-h-[90vh]"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button */}
             <button
               type="button"
               onClick={() => setSelectedImage(null)}
-              className="absolute top-4 right-4 p-2 rounded-lg border border-border bg-muted/80 text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
+              className="absolute top-4 right-4 z-10 p-2 rounded-lg border border-border bg-muted/80 text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
               aria-label="Close image lightbox"
             >
               <X className="w-5 h-5" />
             </button>
 
-            <span className="text-xs font-semibold uppercase tracking-wider text-accent block mb-1">
+            <span className="text-xs font-semibold uppercase tracking-wider text-accent block mb-1 pr-10">
               {selectedImage.category}
             </span>
-            <h3 className="text-xl font-bold text-foreground">{selectedImage.title}</h3>
-            <p className="mt-1 text-xs sm:text-sm text-muted-foreground mb-4">
+            <h3 className="text-xl font-bold text-foreground pr-10">{selectedImage.title}</h3>
+            <p className="mt-1 text-xs sm:text-sm text-muted-foreground mb-4 pr-10">
               {selectedImage.description}
             </p>
 
             {/* Display Area */}
-            <div className="relative aspect-video w-full rounded-xl bg-muted border border-border flex flex-col items-center justify-center p-8 text-center">
-              {selectedImage.src ? (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
-                  src={selectedImage.src}
-                  alt={selectedImage.title}
-                  className="w-full h-full object-contain"
-                />
-              ) : (
-                <div className="space-y-3">
-                  <div className="w-16 h-16 mx-auto rounded-2xl bg-accent/10 border border-accent/20 flex items-center justify-center text-accent">
-                    <ImageIcon className="w-8 h-8" />
+            <div className="flex flex-col gap-6 w-full mt-4">
+              {selectedImage.images && selectedImage.images.length > 0 ? (
+                selectedImage.images.map((img, idx) => (
+                  <div key={idx} className="relative aspect-video w-full rounded-xl bg-muted border border-border flex flex-col items-center justify-center text-center overflow-hidden">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={img}
+                      alt={`${selectedImage.title} - detail ${idx + 1}`}
+                      className="w-full h-full object-contain"
+                    />
                   </div>
-                  <h4 className="text-base font-bold text-foreground">
-                    {selectedImage.title} Slot
-                  </h4>
-                  <p className="text-xs text-muted-foreground max-w-md mx-auto leading-relaxed">
-                    This lightbox container is ready to render the sanitized project screenshot when image files are added to the project.
-                  </p>
+                ))
+              ) : (
+                <div className="relative aspect-video w-full rounded-xl bg-muted border border-border flex flex-col items-center justify-center p-8 text-center">
+                  <div className="space-y-3">
+                    <div className="w-16 h-16 mx-auto rounded-2xl bg-accent/10 border border-accent/20 flex items-center justify-center text-accent">
+                      <ImageIcon className="w-8 h-8" />
+                    </div>
+                    <h4 className="text-base font-bold text-foreground">
+                      {selectedImage.title} Images Slot
+                    </h4>
+                    <p className="text-xs text-muted-foreground max-w-md mx-auto leading-relaxed">
+                      Please add paths to the &quot;images&quot; array for this item to display them in this lightbox.
+                    </p>
+                  </div>
                 </div>
               )}
             </div>

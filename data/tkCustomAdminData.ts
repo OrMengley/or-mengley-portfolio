@@ -15,7 +15,8 @@ export interface GalleryItem {
   title: string;
   description: string;
   category: string;
-  src?: string; // Optional real screenshot path
+  src?: string; // Optional real screenshot path (thumbnail)
+  images?: string[]; // Array of image paths for the detail modal
 }
 
 export const TK_CUSTOM_ADMIN_DATA = {
@@ -197,6 +198,10 @@ export const TK_CUSTOM_ADMIN_DATA = {
       id: 'dash-overview',
       title: 'Main Executive Dashboard',
       category: 'Dashboard & Overview',
+      src: '/tkcustom/dashobard.png',
+      images: [
+        '/tkcustom/dashobard.png',
+      ],
       description:
         'Central administrative dashboard rendering sales activity, purchase order trends, and quick access navigation.',
     },
@@ -206,11 +211,21 @@ export const TK_CUSTOM_ADMIN_DATA = {
       category: 'Inventory Management',
       description:
         'Multi-warehouse inventory listing and stock transfer request workflow for transferring hardware between store locations.',
+      src: '/tkcustom/inventory.png',
+      images: [
+        '/tkcustom/inventory.png',
+        '/tkcustom/stock transfer.png'
+      ]
     },
     {
       id: 'sales-serial',
       title: 'Sales Management & Serial Lookup',
       category: 'Sales & POS',
+      src: '/tkcustom/saleui.png', // <-- REPLACE THIS WITH YOUR ACTUAL IMAGE NAME IN THE PUBLIC FOLDER
+      images: [
+        '/tkcustom/saleui.png',
+        '/tkcustom/findsalebysn.png',
+      ],
       description:
         'Sales order management with barcode-based product lookup and serial number tracking. and serial number lookup for computer components.',
     },
