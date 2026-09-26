@@ -4,30 +4,30 @@ import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Building2, LayoutDashboard, Layers, Code2 } from 'lucide-react';
 
 export function About() {
-  const specializations = [
+  const focusAreas = [
     {
       icon: <Building2 className="w-5 h-5 text-accent" />,
       title: 'Business & POS Systems',
       description:
-        'Developing practical point-of-sale and business management software interfaces.',
+        'Building practical point-of-sale interfaces, sales tracking, and checkout workflows for retail operations.',
     },
     {
       icon: <LayoutDashboard className="w-5 h-5 text-accent" />,
       title: 'Dashboards & Admin Panels',
       description:
-        'Creating intuitive management systems with clean UI and streamlined workflows.',
+        'Creating structured administrative management systems with intuitive navigation and clear data overviews.',
     },
     {
       icon: <Layers className="w-5 h-5 text-accent" />,
-      title: 'Inventory & Operations',
+      title: 'Inventory & Stock Management',
       description:
-        'Building inventory, stock management, and administrative tools.',
+        'Developing stock visibility, inventory adjustment views, and catalog categorization interfaces.',
     },
     {
       icon: <Code2 className="w-5 h-5 text-accent" />,
-      title: 'API Integration',
+      title: 'API & Cloud Integration',
       description:
-        'Integrating RESTful APIs, Go backend endpoints, and Firebase into responsive frontend interfaces.',
+        'Connecting frontend applications directly to Firebase services and collaborating with backend REST APIs.',
     },
   ];
 
@@ -35,23 +35,44 @@ export function About() {
     <Section id="about" mutedBg>
       <SectionHeading
         eyebrow="About Me"
-        title="Frontend developer focused on business application solutions"
-        description="I specialize in building user-centered web applications, POS systems, and management platforms for practical business needs."
+        title="Frontend Developer Focused on Practical Business Applications"
+        description="Building user interfaces for management systems, POS operations, and day-to-day business workflows."
       />
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
-        {specializations.map((spec) => (
+      {/* Bio / Narrative */}
+      <div className="rounded-2xl border border-border bg-card p-6 sm:p-8 shadow-xs mb-8">
+        <div className="space-y-4 text-sm sm:text-base text-muted-foreground leading-relaxed">
+          <p>
+            Hi, I&apos;m <strong className="text-foreground font-semibold">Or Mengley</strong>, a frontend developer with experience building web and mobile applications for business and management workflows.
+          </p>
+          <p>
+            My development journey started with Flutter and Firebase before I moved into modern web development using React, TypeScript, Next.js, and Vue 3.
+          </p>
+          <p>
+            Over time, I have worked on projects involving POS systems, inventory management, school attendance, dashboards, product management, sales workflows, and REST API integration.
+          </p>
+          <p>
+            My current focus is frontend development with <strong className="text-foreground font-semibold">React, Next.js, TypeScript, and Firebase</strong>, while continuing to improve my experience working with backend APIs and larger application workflows.
+          </p>
+        </div>
+      </div>
+
+      {/* Focus Areas Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {focusAreas.map((item) => (
           <div
-            key={spec.title}
-            className="rounded-xl border border-border bg-card p-6 transition-all duration-200 hover:border-accent/40"
+            key={item.title}
+            className="rounded-xl border border-border bg-card p-5 transition-all duration-200 hover:border-accent/40 shadow-xs flex flex-col justify-between"
           >
-            <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center mb-4">
-              {spec.icon}
+            <div>
+              <div className="w-9 h-9 rounded-lg bg-accent/10 flex items-center justify-center mb-3">
+                {item.icon}
+              </div>
+              <h3 className="text-sm font-bold text-foreground">{item.title}</h3>
+              <p className="mt-1.5 text-xs text-muted-foreground leading-relaxed">
+                {item.description}
+              </p>
             </div>
-            <h3 className="text-base font-semibold text-foreground">{spec.title}</h3>
-            <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-              {spec.description}
-            </p>
           </div>
         ))}
       </div>

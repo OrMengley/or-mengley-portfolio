@@ -41,7 +41,10 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased scroll-smooth`}
       suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col bg-background text-foreground transition-colors selection:bg-accent/20 selection:text-accent">
+      <body
+        className="min-h-full flex flex-col bg-background text-foreground transition-colors selection:bg-accent/20 selection:text-accent"
+        suppressHydrationWarning
+      >
         <ThemeProvider>
           {children}
         </ThemeProvider>

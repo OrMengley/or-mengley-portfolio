@@ -5,7 +5,7 @@ import { ArrowRight, Mail } from 'lucide-react';
 
 export function Hero() {
   const primaryTechnologies = ['React', 'TypeScript', 'Next.js', 'Firebase'];
-  const additionalTech = ['Vue 3', 'Flutter', 'REST APIs', 'Go Integration'];
+  const additionalTech = ['Vue 3', 'Flutter', 'REST APIs', 'Go API Integration'];
 
   return (
     <section
@@ -16,7 +16,7 @@ export function Hero() {
         {/* Availability / Subheading pill */}
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border bg-muted/60 text-xs font-medium text-muted-foreground mb-6">
           <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-          Available for Frontend & Web Application Development
+          Available for Frontend &amp; Web Application Development
         </div>
 
         {/* Name */}
@@ -31,7 +31,7 @@ export function Hero() {
 
         {/* Short Description */}
         <p className="mt-6 text-base sm:text-lg text-muted-foreground leading-relaxed max-w-2xl">
-          I build modern business applications, POS systems, dashboards, and management platforms with a focus on practical user experiences.
+          I build practical web applications for real-world business workflows, including POS systems, inventory management, dashboards, and administrative platforms.
         </p>
 
         {/* CTAs */}

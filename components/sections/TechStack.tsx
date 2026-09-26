@@ -2,8 +2,31 @@ import * as React from 'react';
 import { Section } from '@/components/layout/Section';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { TechBadge } from '@/components/ui/TechBadge';
+import {
+  ReactIcon,
+  TypeScriptIcon,
+  NextJsIcon,
+  FirebaseIcon,
+  VueIcon,
+  FlutterIcon,
+  RestApiIcon,
+  GoLangIcon,
+  TailwindIcon,
+} from '@/components/ui/TechIcons';
 
 export function TechStack() {
+  const iconMap: Record<string, React.ReactNode> = {
+    React: <ReactIcon size={30} />,
+    TypeScript: <TypeScriptIcon size={30} />,
+    'Next.js': <NextJsIcon size={30} />,
+    Firebase: <FirebaseIcon size={30} />,
+    'Vue 3': <VueIcon size={28} />,
+    Flutter: <FlutterIcon size={28} />,
+    'REST APIs': <RestApiIcon size={28} />,
+    'Go API Integration': <GoLangIcon size={28} />,
+    'Tailwind CSS': <TailwindIcon size={28} />,
+  };
+
   const primaryStack = [
     { name: 'React', desc: 'Component architecture, Hooks, Context API, state management' },
     { name: 'TypeScript', desc: 'Type safety, strict interfaces, scaleable codebases' },
@@ -37,12 +60,19 @@ export function TechStack() {
             {primaryStack.map((tech) => (
               <div
                 key={tech.name}
-                className="p-5 rounded-xl border border-border bg-card hover:border-accent/40 transition-colors"
+                className="p-5 rounded-xl border border-border bg-card hover:border-accent/40 transition-colors flex flex-col justify-between shadow-xs"
               >
-                <TechBadge label={tech.name} variant="accent" />
-                <p className="mt-3 text-xs text-muted-foreground leading-relaxed">
-                  {tech.desc}
-                </p>
+                <div>
+                  <div className="flex items-center justify-between gap-3 mb-3.5">
+                    <div className="w-10 h-10 rounded-lg bg-muted/60 border border-border/60 flex items-center justify-center p-1 shrink-0">
+                      {iconMap[tech.name]}
+                    </div>
+                    <TechBadge label={tech.name} variant="accent" />
+                  </div>
+                  <p className="mt-2 text-xs text-muted-foreground leading-relaxed">
+                    {tech.desc}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
@@ -57,12 +87,19 @@ export function TechStack() {
             {secondaryStack.map((tech) => (
               <div
                 key={tech.name}
-                className="p-4 rounded-xl border border-border/80 bg-card/60 hover:border-border transition-colors"
+                className="p-4 rounded-xl border border-border/80 bg-card/60 hover:border-border transition-colors flex flex-col justify-between shadow-xs"
               >
-                <TechBadge label={tech.name} variant="default" />
-                <p className="mt-2 text-xs text-muted-foreground leading-relaxed">
-                  {tech.desc}
-                </p>
+                <div>
+                  <div className="flex items-center justify-between gap-3 mb-3">
+                    <div className="w-9 h-9 rounded-lg bg-muted/50 border border-border/50 flex items-center justify-center p-1 shrink-0">
+                      {iconMap[tech.name]}
+                    </div>
+                    <TechBadge label={tech.name} variant="default" />
+                  </div>
+                  <p className="mt-2 text-xs text-muted-foreground leading-relaxed">
+                    {tech.desc}
+                  </p>
+                </div>
               </div>
             ))}
           </div>

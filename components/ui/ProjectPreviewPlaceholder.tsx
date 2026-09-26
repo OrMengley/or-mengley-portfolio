@@ -22,7 +22,10 @@ export function ProjectPreviewPlaceholder({
   isFlagship = false,
   className = '',
 }: ProjectPreviewPlaceholderProps) {
-  const displayImage = imagePath || image || src;
+  let displayImage = imagePath || image || src;
+  if (displayImage && !displayImage.startsWith('/') && !displayImage.startsWith('http') && !displayImage.startsWith('data:')) {
+    displayImage = `/${displayImage}`;
+  }
   const [prevImage, setPrevImage] = React.useState(displayImage);
   const [imageError, setImageError] = React.useState(false);
 

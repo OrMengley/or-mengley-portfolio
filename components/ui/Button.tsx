@@ -7,6 +7,8 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   size?: 'sm' | 'md' | 'lg';
   asChild?: boolean;
   href?: string;
+  target?: string;
+  rel?: string;
 }
 
 export function Button({
@@ -15,6 +17,8 @@ export function Button({
   size = 'md',
   className = '',
   href,
+  target,
+  rel,
   ...props
 }: ButtonProps) {
   const baseStyles =
@@ -41,7 +45,7 @@ export function Button({
 
   if (href) {
     return (
-      <a href={href} className={combinedClasses}>
+      <a href={href} target={target} rel={rel} className={combinedClasses} {...(props as React.AnchorHTMLAttributes<HTMLAnchorElement>)}>
         {children}
       </a>
     );

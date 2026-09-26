@@ -199,42 +199,39 @@ export const TK_CUSTOM_ADMIN_DATA = {
       title: 'Main Executive Dashboard',
       category: 'Dashboard & Overview',
       src: '/tkcustom/dashobard.png',
-      images: [
-        '/tkcustom/dashobard.png',
-      ],
+      images: ['/tkcustom/dashobard.png'],
       description:
         'Central administrative dashboard rendering sales activity, purchase order trends, and quick access navigation.',
     },
     {
-      id: 'inventory-transfer',
-      title: 'Inventory & Stock Transfer Interface',
+      id: 'inventory-management',
+      title: 'Inventory & Stock Management Interface',
       category: 'Inventory Management',
-      description:
-        'Multi-warehouse inventory listing and stock transfer request workflow for transferring hardware between store locations.',
       src: '/tkcustom/inventory.png',
-      images: [
-        '/tkcustom/inventory.png',
-        '/tkcustom/stock transfer.png'
-      ]
+      images: ['/tkcustom/inventory.png'],
+      description:
+        'Comprehensive inventory catalog with stock levels, categorization filters, and stock adjustment workflows.',
+    },
+    {
+      id: 'stock-transfer',
+      title: 'Multi-Warehouse Stock Transfer',
+      category: 'Warehouse Operations',
+      src: '/tkcustom/stock transfer.png',
+      images: ['/tkcustom/stock transfer.png'],
+      description:
+        'Multi-warehouse stock transfer workflow for dispatching, tracking, and receiving hardware components across store locations.',
     },
     {
       id: 'sales-serial',
       title: 'Sales Management & Serial Lookup',
       category: 'Sales & POS',
-      src: '/tkcustom/saleui.png', // <-- REPLACE THIS WITH YOUR ACTUAL IMAGE NAME IN THE PUBLIC FOLDER
+      src: '/tkcustom/saleui.png',
       images: [
         '/tkcustom/saleui.png',
         '/tkcustom/findsalebysn.png',
       ],
       description:
-        'Sales order management with barcode-based product lookup and serial number tracking. and serial number lookup for computer components.',
-    },
-    {
-      id: 'reports-pnl',
-      title: 'Profit & Loss Financial Reporting',
-      category: 'Accounting & Reports',
-      description:
-        'Financial reports module showing profit & loss statements, sales breakdowns, and expense categorizations.',
+        'Sales order management with barcode-based product lookup and individual component serial number tracking.',
     },
   ] as GalleryItem[],
 };

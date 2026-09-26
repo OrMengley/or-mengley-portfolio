@@ -325,6 +325,8 @@ export const SCHOOL_ATTENDANCE_DATA = {
       category: 'Authentication',
       description:
         'Role-aware login portal featuring JWT token issuance, session storage, and immediate redirection to authorized workspaces.',
+      src: '/attendance/login.png',
+      images: ['/attendance/login.png'],
     },
     {
       id: 'dashboard-overview',
@@ -332,6 +334,8 @@ export const SCHOOL_ATTENDANCE_DATA = {
       category: 'Overview & Metrics',
       description:
         'Centralized executive overview displaying school metrics, active term status, attendance summaries, and quick action links.',
+      src: '/attendance/dashboard.png',
+      images: ['/attendance/dashboard.png'],
     },
     {
       id: 'student-mgmt',
@@ -339,6 +343,8 @@ export const SCHOOL_ATTENDANCE_DATA = {
       category: 'Student Management',
       description:
         'Data table view for searching, filtering, and enrolling students into corresponding grade levels and classrooms.',
+      src: '/attendance/students.png',
+      images: ['/attendance/students.png', '/attendance/stenrollment.png'],
     },
     {
       id: 'classroom-academic',
@@ -346,6 +352,8 @@ export const SCHOOL_ATTENDANCE_DATA = {
       category: 'Academic Management',
       description:
         'Administrative interface for managing departments, terms, grades, and classroom structures with assigned teachers.',
+      src: '/attendance/classroom.png',
+      images: ['/attendance/classroom.png', '/attendance/classroomdetail.png', '/attendance/classroomst.png'],
     },
     {
       id: 'teacher-attendance',
@@ -353,6 +361,8 @@ export const SCHOOL_ATTENDANCE_DATA = {
       category: 'Attendance Workflows',
       description:
         'Streamlined teacher view for executing daily student check-ins, check-outs, and marking excused/unexcused absences.',
+      src: '/attendance/schedual.png',
+      images: ['/attendance/schedual.png'],
     },
     {
       id: 'attendance-records',
@@ -360,6 +370,8 @@ export const SCHOOL_ATTENDANCE_DATA = {
       category: 'Reports & Logs',
       description:
         'Historical attendance log viewer providing date-range filtering, classroom breakdowns, and student-level summaries.',
+      src: '/attendance/dashboard.png',
+      images: ['/attendance/dashboard.png'],
     },
   ] as GallerySlot[],
 

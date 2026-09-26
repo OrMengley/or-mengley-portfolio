@@ -4,7 +4,7 @@ export const FEATURED_PROJECTS: FeaturedProject[] = [
   {
     id: 'tk-custom-admin',
     title: 'TK Custom Admin',
-    imagePath: '/tkcustom/publicwebsite.png',
+    imagePath: '/tkcustom/saleui.png',
     category: 'Computer Shop Management / POS / Inventory System',
     role: 'Frontend Developer',
     team: '4 developers total (2 frontend developers, 2 backend developers)',
@@ -12,8 +12,9 @@ export const FEATURED_PROJECTS: FeaturedProject[] = [
       'Frontend development using Vue 3 and integration with the backend API.',
     description:
       'A comprehensive business management system for a computer shop, covering sales, purchases, inventory, warehouses, products, suppliers, accounting, promotions, reports, permissions, and administrative management.',
-    technologies: ['Vue 3', 'Frontend', 'REST API Integration'],
+    technologies: ['Vue 3', 'REST API Integration'],
     isFlagship: true,
+    caseStudyUrl: '/projects/tk-custom-admin',
     keyHighlights: [
       'Multi-warehouse & stock transfer management',
       'Serial number & product-based sales and purchase tracking',
@@ -102,6 +103,7 @@ export const FEATURED_PROJECTS: FeaturedProject[] = [
   {
     id: 'school-attendance-system',
     title: 'School Attendance Management System',
+    imagePath: '/attendance/login.png',
     category: 'School Management / Attendance Management Web Application',
     role: 'Frontend Developer',
     myResponsibility:
@@ -201,15 +203,19 @@ export const FEATURED_PROJECTS: FeaturedProject[] = [
   {
     id: 'car-accessories-pos',
     title: 'Car Accessories POS',
-    category: 'POS / Sales / Inventory',
+    imagePath: '/car_accessories/login.png',
+    category: 'Point of Sale / Stock Management Web Application',
     role: 'Frontend Developer',
+    myResponsibility:
+      'I worked on the frontend application using Next.js, integrating Firestore for business data, Firebase Authentication for user access, and Cloudinary for product image storage.',
     description:
-      'A POS and sales management application built with Next.js, using Firebase Firestore for application data and Firebase Authentication for user authentication.',
+      'Next.js business application using Firebase and Cloudinary for day-to-day car accessories sales and stock management.',
+    caseStudyUrl: '/projects/car-accessories-pos',
     architecture: [
       'Next.js application framework',
-      'Firebase Firestore for data storage',
-      'Firebase Authentication for user authentication',
-      'Cloudinary for image storage',
+      'Firebase Firestore for application data',
+      'Firebase Authentication for user access',
+      'Cloudinary for product image storage & delivery',
     ],
     technologies: [
       'Next.js',
@@ -219,33 +225,63 @@ export const FEATURED_PROJECTS: FeaturedProject[] = [
     ],
     isFlagship: false,
     keyHighlights: [
-      'Next.js application interface',
-      'Firebase Firestore data management',
-      'Firebase Authentication for user sessions',
-      'Cloudinary integration for product image asset management',
+      'Next.js frontend architecture & business UI',
+      'Firebase Firestore direct data integration',
+      'Firebase Authentication for internal user access',
+      'Cloudinary image uploads & delivery',
     ],
     featureGroups: [
       {
-        groupName: 'Core Features',
+        groupName: 'Product Management',
         items: [
-          'POS / Sales',
-          'Product management',
-          'Stock management',
-          'User management',
-          'Product image management',
-          'Firestore data management',
-          'Firebase Authentication',
+          'Product records & catalog listing',
+          'Product specifications & pricing',
+          'Product images linked to Cloudinary',
+          'Product availability tracking',
+        ],
+      },
+      {
+        groupName: 'POS / Sales',
+        items: [
+          'Product selection & search',
+          'Order calculation & checkout workflow',
+          'Sales transaction records',
+        ],
+      },
+      {
+        groupName: 'Stock Management',
+        items: [
+          'Stock quantity tracking',
+          'Stock updates & inventory views',
+          'Current availability status',
+        ],
+      },
+      {
+        groupName: 'User Access',
+        items: [
+          'Firebase Authentication login',
+          'Protected application views',
+          'Internal user access management',
+        ],
+      },
+      {
+        groupName: 'Media Management',
+        items: [
+          'Product image uploads',
+          'Cloudinary image hosting',
+          'Cloudinary image delivery',
         ],
       },
     ],
     allFeatures: [
-      'POS / Sales',
       'Product management',
-      'Stock management',
-      'User management',
-      'Product image management',
-      'Firestore data management',
+      'Product records & pricing',
+      'POS / Sales workflow',
+      'Sales records & history',
+      'Stock management & quantity updates',
       'Firebase Authentication',
+      'User access control',
+      'Cloudinary product image uploads & delivery',
     ],
   },
 ];
