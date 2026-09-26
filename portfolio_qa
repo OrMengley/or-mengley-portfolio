@@ -1,0 +1,225 @@
+FINAL PORTFOLIO QA & PRE-DEPLOYMENT CHECK
+
+Perform a final quality assurance pass on the existing Or Mengley portfolio.
+
+IMPORTANT:
+Do not redesign the portfolio.
+Do not rewrite major content unless required to fix an obvious issue.
+Do not add new sections or technologies.
+
+==================================================
+CHECK ALL MAIN SECTIONS
+==================================================
+
+Verify:
+
+- Navbar
+- Hero
+- About
+- Tools & Technologies
+- Featured Projects
+- TK Custom Admin case study
+- School Attendance case study
+- Car Accessories POS case study
+- Experience
+- Education
+- Development Journey & Focus Areas
+- Contact
+- Footer
+
+==================================================
+PROJECT CHECK
+==================================================
+
+Verify all three major projects:
+
+1. TK Custom Admin
+2. School Attendance Management System
+3. Car Accessories POS
+
+For every project:
+
+- Project card links correctly to case study
+- Quick Summary works
+- Real screenshots load
+- No broken image path
+- Image gallery layout works
+- Enlarged/lightbox preview works
+- Captions and alt text are correct
+- No confidential data is exposed
+- No fake screenshot remains when real screenshots exist
+
+For TK Custom Admin:
+Do not re-add Profit & Loss financial screenshots or confidential financial information.
+
+==================================================
+CONTACT LINKS
+==================================================
+
+Verify:
+
+Email:
+mengley.developer@gmail.com
+
+LinkedIn:
+https://www.linkedin.com/in/or-mengley-68a853221
+
+Phone:
+098 943324
+018 7166671
+
+GitHub:
+Keep the existing working GitHub link.
+
+Check:
+
+- mailto works
+- LinkedIn opens correctly
+- GitHub opens correctly
+- tel links work
+
+==================================================
+RESPONSIVE CHECK
+==================================================
+
+Test:
+
+- Large desktop
+- Laptop
+- Tablet
+- Mobile
+
+Check for:
+
+- Horizontal overflow
+- Broken cards
+- Text wrapping issues
+- Oversized headings
+- Navigation issues
+- Project gallery responsiveness
+- Contact button wrapping
+- Modal/lightbox sizing
+
+==================================================
+LIGHT / DARK MODE
+==================================================
+
+Verify every section and project page in:
+
+- Light mode
+- Dark mode
+
+Check:
+
+- Technology logos
+- Borders
+- Icons
+- Text contrast
+- Screenshots
+- Buttons
+- Cards
+
+==================================================
+ACCESSIBILITY
+==================================================
+
+Check:
+
+- Semantic headings
+- Button labels
+- Link labels
+- Alt text
+- Keyboard navigation
+- Visible focus states
+- Modal/lightbox keyboard closing
+- ESC support where applicable
+
+==================================================
+SEO / METADATA
+==================================================
+
+Verify global metadata:
+
+Title:
+Or Mengley — Frontend Developer
+
+Description:
+Frontend Developer specializing in React, Next.js, Firebase, and business applications.
+
+Verify case study metadata for:
+
+- TK Custom Admin
+- School Attendance
+- Car Accessories POS
+
+Ensure:
+- no fake dates
+- no fake metrics
+- no confidential information
+
+==================================================
+CONTENT ACCURACY
+==================================================
+
+Review wording one final time.
+
+Avoid exaggerated language such as:
+
+- expert
+- highly scalable
+- enterprise-grade
+- world-class
+- high-performance
+- proves expertise
+
+Prefer factual language such as:
+
+- experience with
+- worked on
+- built with
+- integrated with
+- developed
+- implemented
+
+Do not describe Or Mengley as a backend specialist.
+
+==================================================
+TECHNICAL CHECKS
+==================================================
+
+Run:
+
+- TypeScript checks
+- ESLint
+- Production build
+
+Fix all errors introduced or currently blocking production deployment.
+
+Also check browser console for runtime errors.
+
+==================================================
+PERFORMANCE
+==================================================
+
+Without redesigning:
+
+- Ensure screenshots use appropriate Next.js image handling where possible
+- Avoid unnecessarily huge image rendering
+- Confirm no obvious layout shift
+- Remove unused placeholder assets if safe
+- Avoid unnecessary dependencies
+
+Do not aggressively optimize in a way that changes image quality or design.
+
+==================================================
+FINAL RESULT
+==================================================
+
+When finished, report:
+
+1. Any issues found
+2. What was fixed
+3. Any remaining warnings
+4. Whether the project is ready for production deployment
+
+Do not make unrelated changes.

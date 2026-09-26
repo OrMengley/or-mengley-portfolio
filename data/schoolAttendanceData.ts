@@ -411,27 +411,27 @@ export const SCHOOL_ATTENDANCE_DATA = {
   takeaways: [
     {
       title: 'React & Vite Application Architecture',
-      description: 'Demonstrates expertise in building scalable, component-driven React applications with modern Vite tooling.',
+      description: 'Hands-on experience building component-driven React applications with modern Vite tooling.',
     },
     {
       title: 'Strict TypeScript Modeling',
-      description: 'Highlights type-safe frontend practices, comprehensive interface definitions, and resilient state typing.',
+      description: 'Type-safe frontend development practices, comprehensive interface definitions, and structured state typing.',
     },
     {
       title: 'RESTful API Integration',
-      description: 'Proves strong client-side integration capability with external Golang backend services and MongoDB schemas.',
+      description: 'Client-side integration with external Golang REST API services and MongoDB data models.',
     },
     {
       title: 'Role-Based User Experiences',
-      description: 'Showcases the ability to engineer complex, role-gated business workflows tailored to diverse user personas.',
+      description: 'Experience developing role-based business workflows tailored to diverse user roles.',
     },
     {
       title: 'Asynchronous State & Feedback',
-      description: 'Demonstrates handling of real-world frontend challenges: auth tokens, loading skeletons, and error recovery.',
+      description: 'Practical handling of frontend requirements: authentication tokens, loading skeletons, and error states.',
     },
     {
       title: 'Business Domain Engineering',
-      description: 'Shows experience tackling domain-rich business platforms with multi-entity relationships and workflows.',
+      description: 'Experience building business management platforms with multi-entity relationships and workflows.',
     },
   ] as TakeawayItem[],
 };
